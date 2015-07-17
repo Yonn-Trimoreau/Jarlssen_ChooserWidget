@@ -289,7 +289,7 @@ class Jarlssen_ChooserWidget_Helper_Chooser extends Mage_Core_Helper_Abstract
         $adminPath = (string)Mage::getConfig()
             ->getNode(Mage_Adminhtml_Helper_Data::XML_PATH_ADMINHTML_ROUTER_FRONTNAME);
 
-        $currentRouterName = Mage::app()->getRequest()->getRouteName();
+        $currentRouterName = Mage::app()->getRequest()->getModuleName();
 
         if($adminPath != $currentRouterName) {
             $afterElementHtml = $element->getAfterElementHtml();
